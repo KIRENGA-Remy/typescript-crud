@@ -15,7 +15,6 @@ const connectDB = async (): Promise<void> => {
   } catch (err: unknown) {
     if (err instanceof Error) {
       console.error('Failed to connect to MongoDB: ', err.message);
-      console.log(process.env.MONGODB_URL);
       
     } else {
       console.error('Unknown error occurred');

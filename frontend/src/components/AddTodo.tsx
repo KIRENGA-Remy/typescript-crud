@@ -6,7 +6,7 @@ const AddTodo: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    await axios.post('http://localhost:4502/api/todos', { title });
+    await axios.post(`${process.env.BACKEND_URL}/api/todos`, { title });
     setTitle(''); // Clear input after submit
   };
 

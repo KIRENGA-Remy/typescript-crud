@@ -7,8 +7,7 @@ const router = express.Router();
 router.post('/', async (req, res) => {
   const { title, completed } = req.body;
   const newTodo = new Todo({
-    title,
-    completed
+    title
   });
   const savedTodo = await newTodo.save();
   res.json(savedTodo);

@@ -12,7 +12,7 @@ const TodoList: React.FC = () => {
 
   useEffect(() => {
     const fetchTodos = async () => {
-      const response = await axios.get('http://localhost:4502/api/todos');
+      const response = await axios.get(`${process.env.BACKEND_URL}/api/todos`);
       setTodos(response.data);
     };
     fetchTodos();
